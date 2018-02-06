@@ -21,6 +21,10 @@
 		EB4F5D812024D760002974EB /* MooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D802024D760002974EB /* MooViewController.swift */; };
 		EB4F5D832024D85A002974EB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D822024D85A002974EB /* LocationViewController.swift */; };
 		EB4F5D852024D887002974EB /* foodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D842024D887002974EB /* foodTypeViewController.swift */; };
+		EB8E2D442029E3B700B23017 /* loadingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E2D432029E3B700B23017 /* loadingPageViewController.swift */; };
+		EB8E2D462029E47700B23017 /* restaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E2D452029E47700B23017 /* restaurantViewController.swift */; };
+		EB8E2D482029E4F800B23017 /* directionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E2D472029E4F800B23017 /* directionsViewController.swift */; };
+		EB8E2D4A2029E50A00B23017 /* reviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E2D492029E50A00B23017 /* reviewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		EB4F5D802024D760002974EB /* MooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooViewController.swift; sourceTree = "<group>"; };
 		EB4F5D822024D85A002974EB /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		EB4F5D842024D887002974EB /* foodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodTypeViewController.swift; sourceTree = "<group>"; };
+		EB8E2D432029E3B700B23017 /* loadingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadingPageViewController.swift; sourceTree = "<group>"; };
+		EB8E2D452029E47700B23017 /* restaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restaurantViewController.swift; sourceTree = "<group>"; };
+		EB8E2D472029E4F800B23017 /* directionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = directionsViewController.swift; sourceTree = "<group>"; };
+		EB8E2D492029E50A00B23017 /* reviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reviewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,7 @@
 				787BB8202020FF6D00A6C7E6 /* AppDelegate.swift */,
 				787BB8222020FF6D00A6C7E6 /* ViewController.swift */,
 				787BB8242020FF6D00A6C7E6 /* Main.storyboard */,
+				EB8E2D432029E3B700B23017 /* loadingPageViewController.swift */,
 				787BB84E2021000100A6C7E6 /* searchPageViewController.swift */,
 				EB4F5D7A20236121002974EB /* settingsViewController.swift */,
 				EB4F5D7C20236230002974EB /* favoritesViewController.swift */,
@@ -121,6 +130,9 @@
 				EB4F5D802024D760002974EB /* MooViewController.swift */,
 				EB4F5D822024D85A002974EB /* LocationViewController.swift */,
 				EB4F5D842024D887002974EB /* foodTypeViewController.swift */,
+				EB8E2D452029E47700B23017 /* restaurantViewController.swift */,
+				EB8E2D472029E4F800B23017 /* directionsViewController.swift */,
+				EB8E2D492029E50A00B23017 /* reviewsViewController.swift */,
 				787BB8272020FF6D00A6C7E6 /* Assets.xcassets */,
 				787BB8292020FF6D00A6C7E6 /* LaunchScreen.storyboard */,
 				787BB82C2020FF6D00A6C7E6 /* Info.plist */,
@@ -280,12 +292,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8E2D442029E3B700B23017 /* loadingPageViewController.swift in Sources */,
 				EB4F5D852024D887002974EB /* foodTypeViewController.swift in Sources */,
 				EB4F5D832024D85A002974EB /* LocationViewController.swift in Sources */,
+				EB8E2D462029E47700B23017 /* restaurantViewController.swift in Sources */,
 				EB4F5D812024D760002974EB /* MooViewController.swift in Sources */,
 				787BB8232020FF6D00A6C7E6 /* ViewController.swift in Sources */,
+				EB8E2D4A2029E50A00B23017 /* reviewsViewController.swift in Sources */,
 				EB4F5D7F202362C2002974EB /* randomizeViewController.swift in Sources */,
 				787BB8212020FF6D00A6C7E6 /* AppDelegate.swift in Sources */,
+				EB8E2D482029E4F800B23017 /* directionsViewController.swift in Sources */,
 				787BB84F2021000100A6C7E6 /* searchPageViewController.swift in Sources */,
 				EB4F5D7B20236121002974EB /* settingsViewController.swift in Sources */,
 			);

@@ -1,20 +1,23 @@
 //
-//  MooViewController.swift
+//  loadingPageViewController.swift
 //  Food_Mood
 //
-//  Created by Paula Scanlan '18 on 2/2/18.
+//  Created by Paula Scanlan '18 on 2/6/18.
 //  Copyright © 2018 Megan DeMott '18. All rights reserved.
 //
 
 import UIKit
 
-class MooViewController: UIViewController {
+
+class loadingPageViewController: UIViewController {
+
+    var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var timer: Timer! = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,8 +26,10 @@ class MooViewController: UIViewController {
     }
     
     func timeToMoveOn(){
-        self.performSegue(withIdentifier: "goToRestView", sender: self)
+        self.performSegue(withIdentifier: "goToMainUI", sender: self)
     }
+    
+
     /*
     // MARK: - Navigation
 
