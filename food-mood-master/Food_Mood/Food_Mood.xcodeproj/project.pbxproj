@@ -18,6 +18,9 @@
 		EB4F5D7B20236121002974EB /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D7A20236121002974EB /* settingsViewController.swift */; };
 		EB4F5D7D20236230002974EB /* favoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D7C20236230002974EB /* favoritesViewController.swift */; };
 		EB4F5D7F202362C2002974EB /* randomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D7E202362C2002974EB /* randomizeViewController.swift */; };
+		EB4F5D812024D760002974EB /* MooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D802024D760002974EB /* MooViewController.swift */; };
+		EB4F5D832024D85A002974EB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D822024D85A002974EB /* LocationViewController.swift */; };
+		EB4F5D852024D887002974EB /* foodTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D842024D887002974EB /* foodTypeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		EB4F5D7A20236121002974EB /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = settingsViewController.swift; path = ../settingsViewController.swift; sourceTree = "<group>"; };
 		EB4F5D7C20236230002974EB /* favoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = favoritesViewController.swift; path = Food_Mood/favoritesViewController.swift; sourceTree = SOURCE_ROOT; };
 		EB4F5D7E202362C2002974EB /* randomizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = randomizeViewController.swift; sourceTree = "<group>"; };
+		EB4F5D802024D760002974EB /* MooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MooViewController.swift; sourceTree = "<group>"; };
+		EB4F5D822024D85A002974EB /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		EB4F5D842024D887002974EB /* foodTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodTypeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 				EB4F5D7A20236121002974EB /* settingsViewController.swift */,
 				EB4F5D7C20236230002974EB /* favoritesViewController.swift */,
 				EB4F5D7E202362C2002974EB /* randomizeViewController.swift */,
+				EB4F5D802024D760002974EB /* MooViewController.swift */,
+				EB4F5D822024D85A002974EB /* LocationViewController.swift */,
+				EB4F5D842024D887002974EB /* foodTypeViewController.swift */,
 				787BB8272020FF6D00A6C7E6 /* Assets.xcassets */,
 				787BB8292020FF6D00A6C7E6 /* LaunchScreen.storyboard */,
 				787BB82C2020FF6D00A6C7E6 /* Info.plist */,
@@ -271,6 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4F5D852024D887002974EB /* foodTypeViewController.swift in Sources */,
+				EB4F5D832024D85A002974EB /* LocationViewController.swift in Sources */,
+				EB4F5D812024D760002974EB /* MooViewController.swift in Sources */,
 				787BB8232020FF6D00A6C7E6 /* ViewController.swift in Sources */,
 				EB4F5D7F202362C2002974EB /* randomizeViewController.swift in Sources */,
 				787BB8212020FF6D00A6C7E6 /* AppDelegate.swift in Sources */,
