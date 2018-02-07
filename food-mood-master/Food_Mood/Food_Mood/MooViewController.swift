@@ -9,12 +9,26 @@
 import UIKit
 
 class MooViewController: UIViewController {
+    /*@IBAction func tap(_ sender: UITapGestureRecognizer) {
+        guard sender.view != nil else { return }
+        if sender.state == .ended{
+            self.performSegue(withIdentifier: "goToRestView", sender: self)
+        }
+    }*/
+    
+    
+    @IBOutlet var mooView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action:#selector(timeToMoveOn))
+        
+        mooView.addGestureRecognizer(tap)
+        
+        /*self.performSegue(withIdentifier: "goToRestView", sender: self)*/
 
         // Do any additional setup after loading the view.
-        var timer: Timer! = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        //self.timeToMoveOn()
     }
 
     override func didReceiveMemoryWarning() {
