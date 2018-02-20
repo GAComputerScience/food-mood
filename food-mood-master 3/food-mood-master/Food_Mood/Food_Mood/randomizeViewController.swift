@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import AVFoundation
 
 class randomizeViewController: UIViewController {
 
+    var audioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        do {
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "MOO", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+        
+        }
+        
+        catch {
+            
+            print(error)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +36,10 @@ class randomizeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func MooButton(_ sender: Any) {
+        audioPlayer.stop()
+        audioPlayer.play()
+    }
 
     /*
     // MARK: - Navigation

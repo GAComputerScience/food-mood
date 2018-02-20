@@ -124,6 +124,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="MOO"/>
                                 <connections>
+                                    <action selector="MooButton:" destination="24W-0X-5sq" eventType="touchUpInside" id="3OM-8o-WHM"/>
                                     <segue destination="caD-sF-tG8" kind="show" id="m4t-Cj-90I"/>
                                 </connections>
                             </button>
@@ -176,7 +177,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1z-hq-bsy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Hhh-nD-xqA">
                     <connections>
-                        <action selector="tap:" destination="caD-sF-tG8" id="Aya-QR-2OQ"/>
+                        <action selector="MooButtonEnd:" destination="caD-sF-tG8" id="71q-8p-iLX"/>
                         <outlet property="delegate" destination="ydA-KE-IIk" id="nHI-Kh-1qg"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -451,7 +452,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-6t-61Q">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-6t-61Q">
                                 <rect key="frame" x="228" y="86" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -487,7 +488,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYV-5H-pln">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yYV-5H-pln">
                                 <rect key="frame" x="228" y="260" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -562,8 +563,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xhv-lr-aeO"/>
+        <segue reference="Xu5-B1-y5L"/>
         <segue reference="vsj-wm-Cfj"/>
-        <segue reference="8gD-fJ-cf9"/>
+        <segue reference="wad-J6-VJK"/>
     </inferredMetricsTieBreakers>
 </document>

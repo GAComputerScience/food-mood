@@ -15,6 +15,7 @@
 		787BB8362020FF6D00A6C7E6 /* Food_MoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BB8352020FF6D00A6C7E6 /* Food_MoodTests.swift */; };
 		787BB8412020FF6D00A6C7E6 /* Food_MoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BB8402020FF6D00A6C7E6 /* Food_MoodUITests.swift */; };
 		787BB84F2021000100A6C7E6 /* searchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BB84E2021000100A6C7E6 /* searchPageViewController.swift */; };
+		8270296D20335D4500D4FCE7 /* MOO.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8270296C20335D4500D4FCE7 /* MOO.mp3 */; };
 		EB4F5D7B20236121002974EB /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D7A20236121002974EB /* settingsViewController.swift */; };
 		EB4F5D7D20236230002974EB /* favoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D7C20236230002974EB /* favoritesViewController.swift */; };
 		EB4F5D7F202362C2002974EB /* randomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D7E202362C2002974EB /* randomizeViewController.swift */; };
@@ -59,6 +60,7 @@
 		787BB8402020FF6D00A6C7E6 /* Food_MoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_MoodUITests.swift; sourceTree = "<group>"; };
 		787BB8422020FF6D00A6C7E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		787BB84E2021000100A6C7E6 /* searchPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchPageViewController.swift; sourceTree = "<group>"; };
+		8270296C20335D4500D4FCE7 /* MOO.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MOO.mp3; sourceTree = "<group>"; };
 		EB4F5D7A20236121002974EB /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = settingsViewController.swift; path = ../settingsViewController.swift; sourceTree = "<group>"; };
 		EB4F5D7C20236230002974EB /* favoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = favoritesViewController.swift; path = Food_Mood/favoritesViewController.swift; sourceTree = SOURCE_ROOT; };
 		EB4F5D7E202362C2002974EB /* randomizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = randomizeViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				EB8E2D452029E47700B23017 /* restaurantViewController.swift */,
 				EB8E2D472029E4F800B23017 /* directionsViewController.swift */,
 				EB8E2D492029E50A00B23017 /* reviewsViewController.swift */,
+				8270296B20335D2000D4FCE7 /* Music */,
 				787BB8272020FF6D00A6C7E6 /* Assets.xcassets */,
 				787BB8292020FF6D00A6C7E6 /* LaunchScreen.storyboard */,
 				787BB82C2020FF6D00A6C7E6 /* Info.plist */,
@@ -156,6 +159,14 @@
 				787BB8422020FF6D00A6C7E6 /* Info.plist */,
 			);
 			path = Food_MoodUITests;
+			sourceTree = "<group>";
+		};
+		8270296B20335D2000D4FCE7 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				8270296C20335D4500D4FCE7 /* MOO.mp3 */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8270296D20335D4500D4FCE7 /* MOO.mp3 in Resources */,
 				787BB82B2020FF6D00A6C7E6 /* LaunchScreen.storyboard in Resources */,
 				787BB8282020FF6D00A6C7E6 /* Assets.xcassets in Resources */,
 				787BB8262020FF6D00A6C7E6 /* Main.storyboard in Resources */,
