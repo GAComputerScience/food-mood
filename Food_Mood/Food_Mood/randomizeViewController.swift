@@ -1,32 +1,34 @@
 //
-//  searchPageViewController.swift
+//  randomizeViewController.swift
 //  Food_Mood
 //
-//  Created by Megan DeMott '18 on 1/30/18.
+//  Created by Paula Scanlan '18 on 2/1/18.
 //  Copyright © 2018 Megan DeMott '18. All rights reserved.
 //
 
 import UIKit
+import AVFoundation
 
-class searchPageViewController: UIViewController {
+class randomizeViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
+    var audioPlayer = AVAudioPlayer()
     
-    var userSearch: String!
-    @IBAction func searchTap(_ sender: UITapGestureRecognizer) {
-        searchBar.becomeFirstResponder()
-        if searchBar.text != nil {
-            userSearch = searchBar.text
-        }
-        searchBar.resignFirstResponder()
-        print(userSearch)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         // Do any additional setup after loading the view.
+        do {
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "MOO", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+        
+        }
+        
+        catch {
+            
+            print(error)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,10 +36,10 @@ class searchPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func typingTime(){
-        
+    @IBAction func MooButton(_ sender: Any) {
+        audioPlayer.stop()
+        audioPlayer.play()
     }
-    
 
     /*
     // MARK: - Navigation

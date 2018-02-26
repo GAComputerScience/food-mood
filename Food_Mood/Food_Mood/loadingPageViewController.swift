@@ -1,32 +1,23 @@
 //
-//  searchPageViewController.swift
+//  loadingPageViewController.swift
 //  Food_Mood
 //
-//  Created by Megan DeMott '18 on 1/30/18.
+//  Created by Paula Scanlan '18 on 2/6/18.
 //  Copyright © 2018 Megan DeMott '18. All rights reserved.
 //
 
 import UIKit
 
-class searchPageViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    var userSearch: String!
-    @IBAction func searchTap(_ sender: UITapGestureRecognizer) {
-        searchBar.becomeFirstResponder()
-        if searchBar.text != nil {
-            userSearch = searchBar.text
-        }
-        searchBar.resignFirstResponder()
-        print(userSearch)
-    }
+class loadingPageViewController: UIViewController {
+
+    var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         // Do any additional setup after loading the view.
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,8 +25,8 @@ class searchPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func typingTime(){
-        
+    func timeToMoveOn(){
+        self.performSegue(withIdentifier: "goToMainUI", sender: self)
     }
     
 
