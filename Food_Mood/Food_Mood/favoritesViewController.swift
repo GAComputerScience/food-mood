@@ -1,30 +1,17 @@
 //
-//  searchPageViewController.swift
+//  favoritesViewController.swift
 //  Food_Mood
 //
-//  Created by Megan DeMott '18 on 1/30/18.
+//  Created by Paula Scanlan '18 on 2/1/18.
 //  Copyright © 2018 Megan DeMott '18. All rights reserved.
 //
 
 import UIKit
 
-class searchPageViewController: UIViewController {
-
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    var userSearch: String!
-    @IBAction func searchTap(_ sender: UITapGestureRecognizer) {
-        searchBar.becomeFirstResponder()
-        if searchBar.text != nil {
-            userSearch = searchBar.text
-        }
-        searchBar.resignFirstResponder()
-        print(userSearch)
-    }
+class favoritesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
         // Do any additional setup after loading the view.
     }
@@ -32,10 +19,6 @@ class searchPageViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func typingTime(){
-        
     }
     
 
