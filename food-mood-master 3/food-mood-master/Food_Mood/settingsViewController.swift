@@ -9,13 +9,42 @@
 import UIKit
 
 class settingsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    // Do any additional setup after loading the view.
+        
+        radiusNumber.text = "20"
+        radiusSlider.value = 20
+        
+        priceNumber.text = "50"
+        priceSlider.value = 50
 
-        // Do any additional setup after loading the view.
     }
-
+    
+    @IBOutlet weak var radiusSlider: UISlider!
+    
+    @IBOutlet weak var radiusNumber: UILabel!
+    
+    @IBAction func radiusSliderChanged(_ sender: UISlider) {
+        let num = Int(sender.value)
+        radiusNumber.text = "\(num)"
+    }
+    
+    @IBOutlet weak var priceSlider: UISlider!
+    
+    @IBOutlet weak var priceNumber: UILabel!
+    
+    @IBAction func priceSliderChanged(_ sender: UISlider) {
+        let numb = Int(sender.value)
+        priceNumber.text = "\(numb)"
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
