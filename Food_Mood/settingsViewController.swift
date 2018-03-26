@@ -7,21 +7,22 @@
 //
 
 import UIKit
+var rNum: Int = 20
+var pNum: Int = 50
 
 class settingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     // Do any additional setup after loading the view.
-       
         
-        radiusNumber.text = "20"
-        radiusSlider.value = 20
+        radiusNumber.text = "\(rNum)"
+        radiusSlider.value = Float(rNum)
         
-        priceNumber.text = "50"
-        priceSlider.value = 50
-
+        
+        priceNumber.text = "\(pNum)"
+        priceSlider.value = Float(pNum)
+        
     }
     
     @IBOutlet weak var radiusSlider: UISlider!
@@ -31,6 +32,7 @@ class settingsViewController: UIViewController {
     @IBAction func radiusSliderChanged(_ sender: UISlider) {
         let num = Int(sender.value)
         radiusNumber.text = "\(num)"
+        rNum = num
     }
     
     @IBOutlet weak var priceSlider: UISlider!
@@ -38,12 +40,18 @@ class settingsViewController: UIViewController {
     @IBOutlet weak var priceNumber: UILabel!
     
     @IBAction func priceSliderChanged(_ sender: UISlider) {
-        let numb = Int(sender.value)
-        priceNumber.text = "\(numb)"
+        let num = Int(sender.value)
+        priceNumber.text = "\(num)"
+        pNum = num
+        
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-     
+        rNum = Int(radiusSlider.value)
+        pNum = Int(priceSlider.value)
+        print("save button pressed")
+        print("\(rNum)")
+        print("\(pNum)")
     }
     
     
