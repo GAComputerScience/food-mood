@@ -222,15 +222,6 @@
                     <view key="view" contentMode="scaleToFill" id="oxs-lC-qAG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PP-yI-C1M">
-                                <rect key="frame" x="166" y="28" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -255,6 +246,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Directions"/>
                                 <connections>
+                                    <action selector="getDirections:" destination="MN4-fK-Vdg" eventType="touchUpInside" id="sR0-kh-1Cp"/>
                                     <segue destination="DM3-5A-9Cp" kind="show" id="Lgm-bG-mrA"/>
                                 </connections>
                             </button>
@@ -593,8 +585,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qzb-1R-3S2"/>
+        <segue reference="wad-J6-VJK"/>
         <segue reference="wWn-NN-yD8"/>
-        <segue reference="8gD-fJ-cf9"/>
+        <segue reference="qzb-1R-3S2"/>
     </inferredMetricsTieBreakers>
 </document>

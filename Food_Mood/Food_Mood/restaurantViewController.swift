@@ -7,9 +7,24 @@
 //
 
 import UIKit
+import MapKit
 
 class restaurantViewController: UIViewController {
 
+    @IBAction func getDirections(_ sender: Any) {
+        let latitude: CLLocationDegrees = 51.4826
+        let longitude: CLLocationDegrees = 0.0077
+        let regionDistance: CLLocationDistance = 1000;
+        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        
+        let placeMark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placeMark)
+        mapItem.openInMaps(launchOptions: options)
+    
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
