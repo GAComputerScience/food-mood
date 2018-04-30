@@ -259,7 +259,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-1N-ZK6">
-                                <rect key="frame" x="147" y="598" width="81" height="30"/>
+                                <rect key="frame" x="147" y="569" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pick Again!!"/>
                                 <connections>
@@ -370,16 +370,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="searchBar" translatesAutoresizingMaskIntoConstraints="NO" id="4Qs-v5-2Q1">
-                                <rect key="frame" x="0.0" y="101" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="QVH-j4-A3k" id="IT1-D1-X0a"/>
-                                    <outletCollection property="gestureRecognizers" destination="spB-NS-lhi" appends="YES" id="ke1-ds-N5r"/>
-                                </connections>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99z-Lx-BVi">
                                 <rect key="frame" x="16" y="29" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -388,6 +378,16 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Xhv-lr-aeO"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="searchBar" translatesAutoresizingMaskIntoConstraints="NO" id="4Qs-v5-2Q1">
+                                <rect key="frame" x="0.0" y="77" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QVH-j4-A3k" id="IT1-D1-X0a"/>
+                                    <outletCollection property="gestureRecognizers" destination="spB-NS-lhi" appends="YES" id="ke1-ds-N5r"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -587,6 +587,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="wad-J6-VJK"/>
         <segue reference="wWn-NN-yD8"/>
-        <segue reference="qzb-1R-3S2"/>
+        <segue reference="Lb8-nY-3hA"/>
     </inferredMetricsTieBreakers>
 </document>
