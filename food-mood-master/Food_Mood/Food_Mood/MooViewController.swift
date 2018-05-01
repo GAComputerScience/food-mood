@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MooViewController: UIViewController {
     /*@IBAction func tap(_ sender: UITapGestureRecognizer) {
@@ -19,6 +20,8 @@ class MooViewController: UIViewController {
     
     @IBOutlet var mooView: UIView!
 
+    var audioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action:#selector(timeToMoveOn))
@@ -29,6 +32,24 @@ class MooViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         //self.timeToMoveOn()
+    
+        do {
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "MOO", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+            
+        }
+            
+        catch {
+            
+            print(error)
+            
+        }
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        audioPlayer.stop()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,8 +57,15 @@ class MooViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func MooButtonEnd(_ sender: Any) {
+        audioPlayer.stop()
+    }
+    
+
     func timeToMoveOn(){
         self.performSegue(withIdentifier: "goToRestView", sender: self)
+        MooButtonEnd(self)
+    
     }
     /*
     // MARK: - Navigation

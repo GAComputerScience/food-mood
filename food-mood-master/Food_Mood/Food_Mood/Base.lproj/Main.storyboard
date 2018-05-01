@@ -124,6 +124,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="MOO"/>
                                 <connections>
+                                    <action selector="MooButton:" destination="24W-0X-5sq" eventType="touchUpInside" id="3OM-8o-WHM"/>
                                     <segue destination="caD-sF-tG8" kind="show" id="m4t-Cj-90I"/>
                                 </connections>
                             </button>
@@ -176,7 +177,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1z-hq-bsy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Hhh-nD-xqA">
                     <connections>
-                        <action selector="tap:" destination="caD-sF-tG8" id="Aya-QR-2OQ"/>
+                        <action selector="MooButtonEnd:" destination="caD-sF-tG8" id="71q-8p-iLX"/>
                         <outlet property="delegate" destination="ydA-KE-IIk" id="nHI-Kh-1qg"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -221,15 +222,6 @@
                     <view key="view" contentMode="scaleToFill" id="oxs-lC-qAG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PP-yI-C1M">
-                                <rect key="frame" x="166" y="28" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -254,6 +246,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Directions"/>
                                 <connections>
+                                    <action selector="getDirections:" destination="MN4-fK-Vdg" eventType="touchUpInside" id="sR0-kh-1Cp"/>
                                     <segue destination="DM3-5A-9Cp" kind="show" id="Lgm-bG-mrA"/>
                                 </connections>
                             </button>
@@ -266,7 +259,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-1N-ZK6">
-                                <rect key="frame" x="147" y="598" width="81" height="30"/>
+                                <rect key="frame" x="147" y="569" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pick Again!!"/>
                                 <connections>
@@ -309,16 +302,19 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Auh-Y6-vod">
-                                <rect key="frame" x="67" y="84" width="240" height="128"/>
+                                <rect key="frame" x="16" y="84" width="343" height="505"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Auh-Y6-vod" id="xSa-C8-qVl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ae-XM-EVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="-559"/>
+            <point key="canvasLocation" x="885.60000000000002" y="-559.07046476761627"/>
         </scene>
         <!--Food Type View Controller-->
         <scene sceneID="V9X-v8-TZw">
@@ -374,14 +370,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qs-v5-2Q1">
-                                <rect key="frame" x="0.0" y="101" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="QVH-j4-A3k" id="IT1-D1-X0a"/>
-                                </connections>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99z-Lx-BVi">
                                 <rect key="frame" x="16" y="29" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -390,10 +378,21 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Xhv-lr-aeO"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="searchBar" translatesAutoresizingMaskIntoConstraints="NO" id="4Qs-v5-2Q1">
+                                <rect key="frame" x="0.0" y="77" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QVH-j4-A3k" id="IT1-D1-X0a"/>
+                                    <outletCollection property="gestureRecognizers" destination="spB-NS-lhi" appends="YES" id="ke1-ds-N5r"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="4Qs-v5-2Q1" id="2At-fs-ppO"/>
                         <outlet property="searchDisplayController" destination="OOt-zG-3uk" id="1b2-2l-Wa3"/>
                     </connections>
                 </viewController>
@@ -401,12 +400,16 @@
                 <searchDisplayController id="OOt-zG-3uk">
                     <connections>
                         <outlet property="delegate" destination="QVH-j4-A3k" id="ocn-hL-4bv"/>
-                        <outlet property="searchBar" destination="4Qs-v5-2Q1" id="ZDw-Di-7ab"/>
                         <outlet property="searchContentsController" destination="QVH-j4-A3k" id="1JC-a0-k9C"/>
                         <outlet property="searchResultsDataSource" destination="QVH-j4-A3k" id="FgQ-vK-SO1"/>
                         <outlet property="searchResultsDelegate" destination="QVH-j4-A3k" id="ucK-Nl-LHs"/>
                     </connections>
                 </searchDisplayController>
+                <tapGestureRecognizer id="spB-NS-lhi">
+                    <connections>
+                        <action selector="searchTap:" destination="QVH-j4-A3k" id="m2h-XD-VSA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="880.79999999999995" y="141.67916041979012"/>
         </scene>
@@ -444,7 +447,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-6t-61Q">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-6t-61Q">
                                 <rect key="frame" x="228" y="86" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -458,9 +461,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kZI-TO-jwJ">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="kZI-TO-jwJ">
                                 <rect key="frame" x="193" y="140" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="radiusSliderChanged:" destination="rdk-wd-mKK" eventType="valueChanged" id="btL-Zx-mec"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price Range " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DO-pT-BSl">
                                 <rect key="frame" x="16" y="203" width="97" height="21"/>
@@ -469,9 +475,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ADR-lt-Xuk">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ADR-lt-Xuk">
                                 <rect key="frame" x="193" y="203" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="priceSliderChanged:" destination="rdk-wd-mKK" eventType="valueChanged" id="ITe-sQ-Ogf"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food: Set Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lj-7N-Ydi">
                                 <rect key="frame" x="16" y="265" width="124" height="21"/>
@@ -480,7 +489,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYV-5H-pln">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yYV-5H-pln">
                                 <rect key="frame" x="228" y="260" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -491,11 +500,32 @@
                                 <rect key="frame" x="151" y="602" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="rdk-wd-mKK" eventType="touchUpInside" id="Kq0-tT-PBr"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZk-Ay-gpF">
+                                <rect key="frame" x="317" y="145" width="21" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imv-UB-lko">
+                                <rect key="frame" x="317" y="208" width="21" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="priceNumber" destination="Imv-UB-lko" id="B61-pc-Zhz"/>
+                        <outlet property="priceSlider" destination="ADR-lt-Xuk" id="hpk-aQ-0Cu"/>
+                        <outlet property="radiusNumber" destination="eZk-Ay-gpF" id="PhS-Py-ZPM"/>
+                        <outlet property="radiusSlider" destination="kZI-TO-jwJ" id="Gpt-lD-cIU"/>
                         <outlet property="searchDisplayController" destination="OUx-TB-jfa" id="KF7-TY-rZq"/>
                     </connections>
                 </viewController>
@@ -555,8 +585,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xu5-B1-y5L"/>
-        <segue reference="vsj-wm-Cfj"/>
         <segue reference="wad-J6-VJK"/>
+        <segue reference="wWn-NN-yD8"/>
+        <segue reference="Lb8-nY-3hA"/>
     </inferredMetricsTieBreakers>
 </document>

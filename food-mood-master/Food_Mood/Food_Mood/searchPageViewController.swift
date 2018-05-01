@@ -10,9 +10,21 @@ import UIKit
 
 class searchPageViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var userSearch: String!
+    @IBAction func searchTap(_ sender: UITapGestureRecognizer) {
+        searchBar.becomeFirstResponder()
+        if searchBar.text != nil {
+            userSearch = searchBar.text
+        }
+        searchBar.resignFirstResponder()
+        print(userSearch)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         // Do any additional setup after loading the view.
     }
@@ -20,6 +32,10 @@ class searchPageViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func typingTime(){
+        
     }
     
 
