@@ -301,8 +301,13 @@
                                     <segue destination="rdk-wd-mKK" kind="show" id="wWn-NN-yD8"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pv5-tH-bKP">
+                                <rect key="frame" x="0.0" y="58" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Auh-Y6-vod">
-                                <rect key="frame" x="16" y="84" width="343" height="505"/>
+                                <rect key="frame" x="2" y="131" width="373" height="536"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
@@ -310,11 +315,21 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="Auh-Y6-vod" id="xSa-C8-qVl"/>
+                        <outlet property="searchButton" destination="pv5-tH-bKP" id="l6N-EN-IfF"/>
+                        <outlet property="searchDisplayController" destination="naI-LT-eOV" id="suh-zx-dml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ae-XM-EVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="naI-LT-eOV">
+                    <connections>
+                        <outlet property="delegate" destination="AdN-nc-ce8" id="Wx9-rK-0Cf"/>
+                        <outlet property="searchContentsController" destination="AdN-nc-ce8" id="u5B-XW-q4N"/>
+                        <outlet property="searchResultsDataSource" destination="AdN-nc-ce8" id="EFB-3E-GZ6"/>
+                        <outlet property="searchResultsDelegate" destination="AdN-nc-ce8" id="0N4-z7-kAb"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="885.60000000000002" y="-559.07046476761627"/>
+            <point key="canvasLocation" x="906.39999999999998" y="-631.93403298350825"/>
         </scene>
         <!--Food Type View Controller-->
         <scene sceneID="V9X-v8-TZw">

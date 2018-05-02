@@ -11,11 +11,16 @@ import MapKit
 import CoreLocation
 
 class LocationViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+    
+    private var searchController: UISearchController!
+    private var localSearchRequest: MKLocalSearchRequest!
+    private var localSearch: MKLocalSearch!
+    private var localSearchResponse: MKLocalSearchResponse!
     var locationManager:CLLocationManager!
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var searchButton: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +115,40 @@ class LocationViewController: UIViewController, MKMapViewDelegate, CLLocationMan
         mapView.addAnnotation(myAnnotation)
         
     }
+    func searchButtonAction(button: UIBarButtonItem) {
+        if searchController == nil {
+            searchController = UISearchController(searchResultsController: nil)
+        }
+        searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.searchBar.delegate = searchController as! UISearchBarDelegate?
+        
+        present(searchController, animated: true, completion: nil)
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        dismiss(animated: true, completion: nil)
+        
+        if self.mapView.annotations.count != 0 {
+            let annotation = self.mapView.addAnnotation
+            self.mapView.removeAnnotation(annotation as! MKAnnotation)
+        }
+        localSearchRequest = MKLocalSearchRequest()
+        localSearchRequest.naturalLanguageQuery = searchBar.text
+        localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.start { [weak self]  (localSearchResponse, error) -> Void in
+            if localSearchResponse == nil {
+                let alert = UIAlertView(title: nil, message: "Place not found", delegate: self, cancelButtonTitle: "Try again")
+                alert.show()
+                return
+            }
+            let pointAnnotation = MKPointAnnotation()
+            pointAnnotation.title = searchBar.text
+            pointAnnotation.coordinate = CLLocationCoordinate2D(latitude:     localSearchResponse!.boundingRegion.center.latitude, longitude: localSearchResponse!.boundingRegion.center.longitude)
+            let pinAnnotationView = MKPinAnnotationView(annotation: pointAnnotation, reuseIdentifier: nil)
+            self!.mapView.centerCoordinate = pointAnnotation.coordinate
+            self!.mapView.addAnnotation(pinAnnotationView.annotation!)
+        }
     
 
     /*
@@ -122,4 +161,5 @@ class LocationViewController: UIViewController, MKMapViewDelegate, CLLocationMan
     }
     */
 
+}
 }
