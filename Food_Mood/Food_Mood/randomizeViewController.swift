@@ -8,11 +8,17 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
 let client_id = "QMSFYVYCUU0VUYAW4LU5NFZGKNQXK3PCVD3NQOWFOGJ3AJYC"
 let client_secret = "S5FLAVJE5WBUMAU25TEUWXJQC2KUTXZ4W3JWEGZYH3ZOXFIU"
 
+
 class randomizeViewController: UIViewController {
+    
+    
+    var currentLocation:CLLocationCoordinate2D!
+    var searchResults = [JSON]()
 
     var audioPlayer = AVAudioPlayer()
     
@@ -55,12 +61,12 @@ class randomizeViewController: UIViewController {
             currentVenueName = json["response"]["venues"][0]["name"].string
             
             // set label name and visible
-            DispatchQueue.main.async {
+            /*DispatchQueue.main.async {
                 if let v = currentVenueName {
                     self.currentLocationLabel.text = "You're at \(v). Here's some ☕️ nearby."
                 }
                 self.currentLocationLabel.isHidden = false
-            }
+            }*/
         })
         
         task.resume()
@@ -83,14 +89,28 @@ class randomizeViewController: UIViewController {
             
             let json = JSON(data: data!)
             self.searchResults = json["response"]["group"]["results"].arrayValue
+            print(self.searchResults)
+            self.shuffle(array: self.searchResults)
             
-            DispatchQueue.main.async {
+            /*DispatchQueue.main.async {
                 self.tableView.isHidden = false
                 self.tableView.reloadData()
-            }
+            }*/
         })
         
         task.resume()
+    }
+    
+    func shuffle(array: [JSON]) {
+        var shuffled = [JSON]();
+        for i in 0..<array.count{
+            let rand = Int(arc4random_uniform(UInt32(array.count)))
+            
+            shuffled.append(array[rand])
+            
+            //array.remove(at: rand)
+        }
+        print(shuffled)
     }
     
 

@@ -15,6 +15,7 @@
 		787BB8362020FF6D00A6C7E6 /* Food_MoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BB8352020FF6D00A6C7E6 /* Food_MoodTests.swift */; };
 		787BB8412020FF6D00A6C7E6 /* Food_MoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BB8402020FF6D00A6C7E6 /* Food_MoodUITests.swift */; };
 		787BB84F2021000100A6C7E6 /* searchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787BB84E2021000100A6C7E6 /* searchPageViewController.swift */; };
+		78D7D7542098E0F400FE3793 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7D7532098E0F400FE3793 /* SwiftyJSON.swift */; };
 		8270296D20335D4500D4FCE7 /* MOO.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8270296C20335D4500D4FCE7 /* MOO.mp3 */; };
 		EB4F5D7B20236121002974EB /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D7A20236121002974EB /* settingsViewController.swift */; };
 		EB4F5D7D20236230002974EB /* favoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4F5D7C20236230002974EB /* favoritesViewController.swift */; };
@@ -60,6 +61,7 @@
 		787BB8402020FF6D00A6C7E6 /* Food_MoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_MoodUITests.swift; sourceTree = "<group>"; };
 		787BB8422020FF6D00A6C7E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		787BB84E2021000100A6C7E6 /* searchPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchPageViewController.swift; sourceTree = "<group>"; };
+		78D7D7532098E0F400FE3793 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		8270296C20335D4500D4FCE7 /* MOO.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MOO.mp3; sourceTree = "<group>"; };
 		EB4F5D7A20236121002974EB /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = settingsViewController.swift; path = ../settingsViewController.swift; sourceTree = "<group>"; };
 		EB4F5D7C20236230002974EB /* favoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = favoritesViewController.swift; path = Food_Mood/favoritesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -129,6 +131,7 @@
 				EB4F5D7A20236121002974EB /* settingsViewController.swift */,
 				EB4F5D7C20236230002974EB /* favoritesViewController.swift */,
 				EB4F5D7E202362C2002974EB /* randomizeViewController.swift */,
+				78D7D7532098E0F400FE3793 /* SwiftyJSON.swift */,
 				EB4F5D802024D760002974EB /* MooViewController.swift */,
 				EB4F5D822024D85A002974EB /* LocationViewController.swift */,
 				EB4F5D842024D887002974EB /* foodTypeViewController.swift */,
@@ -315,6 +318,7 @@
 				787BB8212020FF6D00A6C7E6 /* AppDelegate.swift in Sources */,
 				EB8E2D482029E4F800B23017 /* directionsViewController.swift in Sources */,
 				787BB84F2021000100A6C7E6 /* searchPageViewController.swift in Sources */,
+				78D7D7542098E0F400FE3793 /* SwiftyJSON.swift in Sources */,
 				EB4F5D7B20236121002974EB /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
